@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+  :root {
+    --color-background: 255 248 240; /* #FFF8F0 */
+    --color-surface: 248 233 221;    /* #F8E9DD */
+    --color-highlight: 231 143 142;  /* #E78F8E */
+    --color-strong: 201 100 100;    /* #C96464 */
+    --color-text-primary: 76 70 70;      /* #4C4646 */
+    --color-text-body: 87 75 75;         /* #574B4B */
+    --color-text-heading: 176 125 118;  /* #B07D76 */
+  }
+
+.dark {
+  /* Night Mode Palette: Regal Navy with Gold/Orange Accents */
+  --color-background: 12 18 26;      /* A very dark, near-black navy */
+  --color-surface: 20 29 42;       /* Dark navy surface for cards/sections */
+  --color-highlight: 245 158 11;     /* A vibrant, warm orange for highlights/CTAs */
+  --color-strong: 217 119 6;      /* A deeper, rich gold for strong links/accents */
+  --color-text-primary: 247 242 233;  /* A soft, off-white for primary text */
+  --color-text-body: 184 178 169;    /* A muted, warm grey for body text */
+  --color-text-heading: 224 163 80;   /* A light, elegant gold for headings */
+}
