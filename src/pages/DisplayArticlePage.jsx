@@ -3,6 +3,9 @@ import { useParams } from 'react-router-dom';
 import Layout from '../components/Layout';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import CodeBlock from '../components/CodeBlock';
+
+
 
 const Spinner = () => (
     <div className="flex justify-center items-center p-10">
@@ -51,7 +54,7 @@ const DisplayArticlePage = () => {
                     <div
         className="prose prose-lg lg:prose-xl max-w-none dark:prose-invert prose-headings:font-poppins prose-headings:text-text-heading prose-p:text-text-body prose-a:text-strong hover:prose-a:text-highlight prose-blockquote:text-text-body/90 prose-strong:text-text-primary"
     >
-        <ReactMarkdown remarkPlugins={[remarkGfm]}>{article.content}</ReactMarkdown>
+        <ReactMarkdown remarkPlugins={[remarkGfm]} components={CodeBlock} >{article.content}</ReactMarkdown>
     </div>
                 </article>
             )}

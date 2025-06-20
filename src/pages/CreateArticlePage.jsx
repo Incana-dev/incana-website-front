@@ -3,6 +3,7 @@ import axios from 'axios';
 import Layout from '../components/Layout';
 import ReactMarkdown from 'react-markdown'; 
 import remarkGfm from 'remark-gfm'; 
+import CodeBlock from '../components/CodeBlock';
 
 const CreateArticlePage = () => {
     const [title, setTitle] = useState('');
@@ -85,7 +86,7 @@ const CreateArticlePage = () => {
             <div>
                 <label className="block text-text-body mb-2 text-lg">Preview</label>
                 <div className="prose prose-lg lg:prose-xl max-w-none dark:prose-invert prose-headings:font-poppins prose-headings:text-text-heading prose-p:text-text-body prose-a:text-strong prose-strong:text-text-primary bg-background rounded p-4 h-96 overflow-y-auto">
-                    <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
+                    <ReactMarkdown remarkPlugins={[remarkGfm]} components={CodeBlock} >{content}</ReactMarkdown>
                 </div>
             </div>
         ) : (
